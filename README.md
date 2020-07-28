@@ -1,6 +1,6 @@
 # GrAPI - [GraM](http://gram.sickinger-solutions.at) API
 
-Hosted at (if I get GitHub-Pages working) https://gram.profiluefter.me
+Hosted at https://gram.profiluefter.me
 
 ## Screenshots
 
