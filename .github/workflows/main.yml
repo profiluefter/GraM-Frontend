@@ -16,8 +16,6 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Copy index to 404 so that links to subpages work
-        run: cp build/index.html build/404.html
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.5.9
         with:
