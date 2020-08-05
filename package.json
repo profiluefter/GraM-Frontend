@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^4.5.1",
     "bootswatch": "^4.5.1",
     "friendly-time": "^1.1.1",
     "lodash": "^4.17.19",
