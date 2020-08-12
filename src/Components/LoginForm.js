@@ -10,7 +10,7 @@ import Card from 'react-bootstrap/Card';
 import Collapse from 'react-bootstrap/Collapse';
 
 //TODO: Better loading animation
-const LoginForm = ({loading, error, tryLogin}) => {
+const LoginForm = ({loading, error, everLoggedIn, tryLogin}) => {
   const username = useRef(), password = useRef();
 
   const loginClicked = e => {
@@ -23,6 +23,11 @@ const LoginForm = ({loading, error, tryLogin}) => {
       <Card>
         <Card.Header>Login</Card.Header>
         <Card.Body>
+          <Collapse in={!everLoggedIn}>
+            <div>
+              <Alert variant="info">A demo account exists with the username and password "demo"!</Alert>
+            </div>
+          </Collapse>
           <Collapse in={(error !== null)}>
             <div>
               <Alert variant="danger">{error}</Alert>
@@ -47,7 +52,8 @@ const LoginForm = ({loading, error, tryLogin}) => {
 
 const mapStateToProps = state => ({
   error: state.login.error,
-  loading: state.login.loading
+  loading: state.login.loading,
+  everLoggedIn: state.login.everLoggedIn
 });
 
 const mapDispatchToProps = dispatch => ({

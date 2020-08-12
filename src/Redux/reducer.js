@@ -25,7 +25,8 @@ const login = (state = defaultState.login, action) => {
     case LOGIN_SUCCESSFUL:
       return Object.assign({}, state, {
         loading: false,
-        token: action.token
+        token: action.token,
+        everLoggedIn: true
       });
     case LOGIN_FAILED:
       return Object.assign({}, state, {

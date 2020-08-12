@@ -5,7 +5,8 @@ const defaultState = Object.freeze({
   login: {
     loading: false,
     error: null,
-    token: null
+    token: null,
+    everLoggedIn: false
   },
   dashboard: {
     loading: false,
@@ -53,7 +54,8 @@ export let saveChangesListener = store => throttle(() => {
       timestamp: currentState.dashboard.timestamp
     },
     login: {
-      token: currentState.login.token
+      token: currentState.login.token,
+      everLoggedIn: currentState.login.everLoggedIn
     },
     settings: currentState.settings
   });
