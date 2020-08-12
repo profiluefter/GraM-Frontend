@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {applyMiddleware, createStore} from 'redux';
-import {createLogger} from 'redux-logger';
+import {compose, applyMiddleware, createStore} from 'redux';
 import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 
@@ -14,13 +13,16 @@ import reducer from './Redux/reducer';
 import refreshDashboardWatcher from './Redux/polling';
 
 const sagaMiddleware = createSagaMiddleware();
-const loggerMiddleware = createLogger({collapsed: true});
+// noinspection JSUnresolvedVariable
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const persistedState = loadState();
 const store = createStore(
   reducer,
   persistedState,
-  applyMiddleware(thunk, sagaMiddleware, loggerMiddleware)
+  composeEnhancers(
+    applyMiddleware(thunk, sagaMiddleware)
+  )
 );
 
 sagaMiddleware.run(refreshDashboardWatcher);
