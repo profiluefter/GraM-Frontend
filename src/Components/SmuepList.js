@@ -22,8 +22,8 @@ const SmuepList = React.forwardRef(({smueps, timestamp}, ref) => {
   return (
     <Card ref={ref}>
       <Card.Header>SMÜPs</Card.Header>
-      <Card.Body>
-        <Table bordered hover>
+      <Card.Body className="p-0">
+        <Table hover className="m-0">
           <thead>
           <tr>
             <th className="col-2">Name</th>
