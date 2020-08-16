@@ -34,9 +34,9 @@ const Dashboard = ({startPolling, stopPolling, loggedIn, logout, loading, loaded
 
   const scrollToRef = ref => () => window.scrollTo(0, ref.current.offsetTop - navBar.current.offsetHeight);
 
-  const [settingsVisible, setSettingsVisibile] = useState(false);
-  const showSettings = () => setSettingsVisibile(true);
-  const closeSettings = () => setSettingsVisibile(false);
+  const [settingsVisible, setSettingsVisible] = useState(false);
+  const showSettings = () => setSettingsVisible(true);
+  const closeSettings = () => setSettingsVisible(false);
 
   return (
     <div>
