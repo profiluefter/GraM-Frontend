@@ -1,13 +1,13 @@
-import React, {useRef} from 'react';
-import {connect} from 'react-redux';
+import React, {useRef} from "react";
+import {connect} from "react-redux";
 
-import {login} from '../Redux/logic';
-import Fade from 'react-bootstrap/Fade';
-import Alert from 'react-bootstrap/Alert';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Collapse from 'react-bootstrap/Collapse';
+import {login} from "../Redux/logic";
+import Fade from "react-bootstrap/Fade";
+import Alert from "react-bootstrap/Alert";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import Collapse from "react-bootstrap/Collapse";
 
 //TODO: Better loading animation
 const LoginForm = ({loading, error, everLoggedIn, tryLogin}) => {

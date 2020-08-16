@@ -1,5 +1,5 @@
-import React from 'react';
-import Badge from 'react-bootstrap/Badge';
+import React from "react";
+import Badge from "react-bootstrap/Badge";
 
 const Grade = ({value}) => {
   switch(value) {

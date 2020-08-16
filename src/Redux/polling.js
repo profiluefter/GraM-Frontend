@@ -1,4 +1,4 @@
-import {call, delay, put, race, select, take} from 'redux-saga/effects';
+import {call, delay, put, race, select, take} from "redux-saga/effects";
 import {
   DASHBOARD_START_POLLING,
   DASHBOARD_STOP_POLLING,
@@ -6,7 +6,7 @@ import {
   dashboardRequestFinished,
   dashboardRequestStarted,
   loginInvalidated
-} from './actions';
+} from "./actions";
 
 function* refreshDashboardWorker() {
   while(true) {
@@ -18,8 +18,8 @@ function* refreshDashboardWorker() {
     yield put(dashboardRequestStarted());
 
     const response = yield call(() => {
-      return fetch(grapi.host + '/home', {
-        method: 'POST',
+      return fetch(grapi.host + "/home", {
+        method: "POST",
         body: JSON.stringify({token})
       }).then(response => response.json());
     });
@@ -27,8 +27,8 @@ function* refreshDashboardWorker() {
     if(response.success === true) {
       yield put(dashboardRequestFinished(Object.assign({}, response, {success: undefined})));
     } else {
-      yield put(loginInvalidated('Token expired'));
-      yield put(dashboardRequestFailed(response.error ? response.error : 'An error occurred!'));
+      yield put(loginInvalidated("Token expired"));
+      yield put(dashboardRequestFailed(response.error ? response.error : "An error occurred!"));
     }
 
     yield delay(grapi.pollingInterval);

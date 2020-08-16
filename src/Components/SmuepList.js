@@ -1,9 +1,9 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import Table from 'react-bootstrap/Table';
-import Card from 'react-bootstrap/Card';
-import ProgressBar from 'react-bootstrap/ProgressBar';
-import LastUpdated from './lastUpdated';
+import React from "react";
+import {connect} from "react-redux";
+import Table from "react-bootstrap/Table";
+import Card from "react-bootstrap/Card";
+import ProgressBar from "react-bootstrap/ProgressBar";
+import LastUpdated from "./lastUpdated";
 
 const SmuepList = React.forwardRef(({smueps, timestamp}, ref) => {
   const tableRows = [];

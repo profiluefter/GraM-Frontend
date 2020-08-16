@@ -1,7 +1,7 @@
-import {combineReducers} from 'redux';
-import objectAssignDeep from 'object-assign-deep';
+import {combineReducers} from "redux";
+import objectAssignDeep from "object-assign-deep";
 
-import defaultState from './persistance'
+import defaultState from "./persistance";
 
 import {
   DASHBOARD_INVALIDATED,
@@ -13,7 +13,7 @@ import {
   LOGIN_STARTED,
   LOGIN_SUCCESSFUL,
   SETTINGS_UPDATED
-} from './actions';
+} from "./actions";
 
 const login = (state = defaultState.login, action) => {
   switch(action.type) {

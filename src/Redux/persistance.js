@@ -1,5 +1,5 @@
-import objectAssignDeep from 'object-assign-deep';
-import throttle from 'lodash/throttle';
+import objectAssignDeep from "object-assign-deep";
+import throttle from "lodash/throttle";
 
 const defaultState = Object.freeze({
   login: {
@@ -16,7 +16,7 @@ const defaultState = Object.freeze({
   },
   settings: {
     grapi: {
-      host: 'https://grapi.profiluefter.me',
+      host: "https://grapi.profiluefter.me",
       pollingInterval: 60000
     }
   }
@@ -25,12 +25,12 @@ export default defaultState;
 
 export const loadState = () => {
   try {
-    const serializedState = localStorage.getItem('state');
+    const serializedState = localStorage.getItem("state");
     if(serializedState === null)
       return undefined;
     let savedState = JSON.parse(serializedState);
     let combinedState = objectAssignDeep({}, defaultState, savedState);
-    console.log('Loaded combined state: ', combinedState);
+    console.log("Loaded combined state: ", combinedState);
     return combinedState;
   } catch(e) {
     return undefined;
@@ -40,7 +40,7 @@ export const loadState = () => {
 const saveState = state => {
   try {
     const serializedState = JSON.stringify(state);
-    localStorage.setItem('state', serializedState);
+    localStorage.setItem("state", serializedState);
   } catch(e) {
     //Save errors are ignored
   }

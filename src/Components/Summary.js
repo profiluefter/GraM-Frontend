@@ -1,8 +1,8 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Grade from './Grade';
+import React from "react";
+import {connect} from "react-redux";
+import Card from "react-bootstrap/Card";
+import Container from "react-bootstrap/Container";
+import Grade from "./Grade";
 
 const Summary = React.forwardRef(({homework, smuep, tests, grade, finalGrade}, ref) => (
   <Card ref={ref}>

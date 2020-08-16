@@ -1,10 +1,10 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import Card from 'react-bootstrap/Card';
-import Table from 'react-bootstrap/Table';
-import ProgressBar from 'react-bootstrap/ProgressBar';
-import LastUpdated from './lastUpdated';
-import Grade from './Grade';
+import React from "react";
+import {connect} from "react-redux";
+import Card from "react-bootstrap/Card";
+import Table from "react-bootstrap/Table";
+import ProgressBar from "react-bootstrap/ProgressBar";
+import LastUpdated from "./lastUpdated";
+import Grade from "./Grade";
 
 const TestList = React.forwardRef(({tests, timestamp}, ref) => {
   const tableRows = [];

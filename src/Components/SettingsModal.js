@@ -1,13 +1,13 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {connect} from 'react-redux';
+import React, {useEffect, useRef, useState} from "react";
+import {connect} from "react-redux";
 
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
 
-import {settingsUpdated} from '../Redux/actions';
-import defaultState from '../Redux/persistance';
+import {settingsUpdated} from "../Redux/actions";
+import defaultState from "../Redux/persistance";
 
 const SettingsModal = ({show, onClose, settings, saveChanges}) => {
   const [grapiEndpoint, pollingInterval] = [useRef(), useRef()];
