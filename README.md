@@ -1,4 +1,4 @@
-# GrAPI - [GraM](http://gram.sickinger-solutions.at) API
+# GraM-Frontend - A better Frontend for the [GraM](http://gram.sickinger-solutions.at) grading management
 
 Hosted at https://gram.profiluefter.me; More information about this project is available on the [project-page on profiluefter.me](https://profiluefter.me/projects/gram-frontend)
 
