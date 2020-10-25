@@ -9,7 +9,7 @@
     "lodash": "^4.17.20",
     "object-assign-deep": "^0.4.0",
     "react": "^16.14.0",
-    "react-bootstrap": "^1.3.0",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
