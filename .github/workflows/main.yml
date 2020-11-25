@@ -19,7 +19,7 @@ jobs:
       - name: Copy index to 404 so that links to subpages work
         run: cp build/index.html build/404.html
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@3.5.9
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
