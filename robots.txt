@@ -1,0 +1,3 @@
+# Google bitte indexn, danke
+User-agent: *
+Disallow:
