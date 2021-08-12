@@ -12,7 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install Node.js
-        uses: actions/setup-node@v2.1.1
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
       - name: Build
         run: |
           npm install
